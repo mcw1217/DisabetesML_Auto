@@ -1,0 +1,61 @@
+랜덤 포레스트
+최저점이 0.91을 넘고 테스트 평균 점수가 0.979로 그레이디언트 부스팅보다 약간 더 높다. 
+crossvalidation score 평균은 0.973으로 그레이디언트 부스팅보다 0.008가량 더 높다.
+단, 그레이디언트 부스팅보다 좀 더 학습하는데 시간이 걸린다.
+
+score min: train: 1.0 test: 0.9134615384615384
+score mean: train: 1.0 test: 0.9798461538461537
+cross score min: train: 0.9993975903614458 test: 0.9496270797475617
+cross score mean: train: 0.9999993975903615 test: 0.9730432013769363
+
+
+
+그레이디언트 부스팅
+최저점이 0.91을 넘고 테스트 평균 점수가 0.971을 넘는다. cross validation score 평균 역시 0.965를 넘는다
+단, 학습시간이 다른 모델에 비해 3~4배 정도 더 걸린다.
+
+score min: train: 0.9903846153846154 test: 0.9134615384615384
+score mean: train: 0.9980072115384614 test: 0.9715576923076923
+cross score min: train: 0.9963963963963962 test: 0.9374641422834195
+cross score mean: train: 0.9994549314374614 test: 0.9655523235800344
+
+
+
+
+
+DecisionTreeClassifier
+최저점이 0.9을 넘고 테스트 평균 점수가 0.96을 넘는다. cross validation score 평균 역시 0.95를 넘는다
+
+score min: train: 1.0 test: 0.9038461538461539
+score mean: train: 1.0 test: 0.9638557692307691
+cross score min: train: 1.0 test: 0.9205966724039014
+cross score mean: train: 1.0 test: 0.9547946643717728
+
+
+
+
+KneighborsClassifier
+최저점이 낮고 테스트 평균 점수 여기 0.9를 넘지 못한다.
+
+score min: train: 0.8990384615384616 test: 0.7692307692307693
+score mean: train: 0.9295600961538462 test: 0.8824134615384616
+cross score min: train: 0.8912207388111003 test: 0.8030407343660355
+cross score mean: train: 0.915234163681754 test: 0.8588829030407343
+
+-> (KneighborsClassfier의 파라미터인 n_neighbors의 값을 낮추어 진행) => 학습 1000회 수행 
+기본 파라미터 값을 사용할때보다 성능이 나아짐
+score min: train: 0.9350961538461539 test: 0.8173076923076923
+score mean: train: 0.9556682692307693 test: 0.9098942307692308
+cross score min: train: 0.9302923405333043 test: 0.8486230636833045
+cross score mean: train: 0.9499196334889107 test: 0.893440562248996
+
+
+
+
+svm 
+
+매우 낮은 성능을 보임
+score min: train: 0.5865384615384616 test: 0.5
+score mean: train: 0.6163245192307693 test: 0.6174326923076923
+cross score min: train: 0.5865389485871414 test: 0.5841652323580033
+cross score mean: train: 0.6158167842541336 test: 0.6153324440619622

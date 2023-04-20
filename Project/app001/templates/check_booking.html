@@ -1,0 +1,116 @@
+{% extends 'admin_layout.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+
+<div>
+    <form action="{{ url_for('save_survey') }}" method="POST">
+        <table class="check_booking" border="1">
+            <tr>
+                <th>예약 날짜</th>
+                <td class="t1">{{check_booking['y']}}년{{check_booking['m']}}월{{check_booking['d']}}일</td>
+                <th>환자 id</th>
+                <td>{{check_booking['userid']}}</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" class="check_booking">
+            <tr>
+                <th>질문</th>
+                <th>답변</th>
+            </tr>
+            <tr>
+                <td>나이</td>
+                <td>{{check_booking['survey_content'][0]}}</td>
+            </tr>
+            <tr>
+                <td>성별</td>
+                <td>{{check_booking['survey_content'][1]}}</td>
+            </tr>
+            <tr>
+                <td>다뇨증이 있으신가요?</td>
+                <td>{{check_booking['survey_content'][2]}}</td>
+            </tr>
+            <tr>
+                <td>다갈증이 있으신가요?</td>
+                <td>{{check_booking['survey_content'][3]}}</td>
+            </tr>
+            <tr>
+                <td>최근에 체중이 급격하게 감소되었나요?</td>
+                <td>{{check_booking['survey_content'][4]}}</td>
+            </tr>
+            <tr>
+                <td>최근에 몸이 약해졌다는게 느껴지시나요?</td>
+                <td>{{check_booking['survey_content'][5]}}</td>
+            </tr>
+            <tr>
+                <td>다식증이 있으신가요?</td>
+                <td>{{check_booking['survey_content'][6]}}</td>
+            </tr>
+            <tr>
+                <td>질효모감염증( 질의 발적, 가려움, 통징, 흰색의 질 분비물이 일어나는 증상 )</td>
+                <td>{{check_booking['survey_content'][7]}}</td>
+            </tr>
+            <tr>
+                <td>최근에 시야가 흐려지는 현상이 있으신가요?</td>
+                <td>{{check_booking['survey_content'][8]}}</td>
+            </tr>
+            <tr>
+                <td>최근에 자주 가려움증을 느끼시나요?</td>
+                <td>{{check_booking['survey_content'][9]}}</td>
+            </tr>
+            <tr>
+                <td>쉽게 화를 내고 성격이 급한가요?</td>
+                <td>{{check_booking['survey_content'][10]}}</td>
+            </tr>
+            <tr>
+                <td>상체나 부상을 당했을 때 회복이 늦어지나요?</td>
+                <td>{{check_booking['survey_content'][11]}}</td>
+            </tr>
+            <tr>
+                <td>신체에 부분 마비 증상이 있나요?</td>
+                <td>{{check_booking['survey_content'][12]}}</td>
+            </tr>
+            <tr>
+                <td>최근에 근육에 경직이 온적이 있나요?</td>
+                <td>{{check_booking['survey_content'][13]}}</td>
+            </tr>
+            <tr>
+                <td>최근에 머리가 많이 빠지거나 탈모증상이 나타나고 있나요?</td>
+                <td>{{check_booking['survey_content'][14]}}</td>
+            </tr>
+            <tr>
+                <td>현재 체중이 비만이신가요?</td>
+                <td>{{check_booking['survey_content'][15]}}</td>
+            </tr>
+
+        </table>
+        <br>
+        <br>
+        <br>
+        <input type="text" name="survey_content" value="'{{check_booking['survey_content']}}'" style="display:none">
+        <input type="text" name="userid" value="{{check_booking['userid']}}" style="display:none">
+        <input type="text" name="y" value="{{check_booking['y']}}" style="display:none">
+        <input type="text" name="m" value="{{check_booking['m']}}" style="display:none">
+        <input type="text" name="d" value="{{check_booking['d']}}" style="display:none">
+
+
+
+        <div class="check_div">
+        [진단 결과] 환자에게 당뇨병이 있나요?
+        <br>
+        예<input type="radio" name="Dia" value="Positive">
+        아니오<input type="radio" name="Dia" value="Negative">
+        <input type="submit" value="전송하기">
+        </div>
+    </form>
+
+
+</div>
+
+
+
+
+
+{% endblock %}

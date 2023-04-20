@@ -1,0 +1,22 @@
+{% extends 'admin_layout.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+        <table border="1" class="booking_main">
+        <tr>
+            <th>환자 ID</th>
+            <th>환자 초기진단</th>
+            <th>검진 예약날짜</th>
+        </tr>
+        {% for book in booking %}
+        <tr>
+            <td> {{booking[book]['userid']}} </td>
+            <td> {{booking[book]['survey_content']}} </td>
+            <td> {{booking[book]['y']}}년 {{booking[book]['m']}}월 {{booking[book]['d']}}일 </td>
+            <td><a href="{{url_for('check_booking',userid=booking[book]['userid'],y=booking[book]['y'],m=booking[book]['m'],d=booking[book]['d'],survey_content=booking[book]['survey_content'])}}">검진 시작</a></td>
+            <td><a href="{{url_for('delete_booking',userid=booking[book]['userid'],y=booking[book]['y'],m=booking[book]['m'],d=booking[book]['d'])}}">삭제</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+    <div class="booking_menu">
+    <form action="{{url_for('booking_ans')}}" method="post">
+        <p class="msg_a"><b>{{msg}}</b></p>
+        <br>
+        <br>
+        {%if pre == "Positive"%}
+        [진료 예약] - 원하시는 날짜를 선택 후 예약 버튼을 눌러주세요.
+        <br><br>
+        <select name="hospital">
+            <option value="">--병원 선택--</option>
+            <option value="3">호서병원</option>
+            <option value="4">강서병원</option>
+        </select>
+        <select name="y">
+            <option value="">--년도 선택--</option>
+            <option value="2022">2022년</option>
+            <option value="2023">2023년</option>
+            <option value="2024">2024년</option>
+        </select>
+        <select name="m">
+            <option value="">--월 선택--</option>
+            {% for i in range(1,13)%}
+                <option value="{{i}}">{{i}}월</option>
+            {% endfor %}
+        </select>
+        <select name="d">
+            <option value="">--일 선택--</option>
+            {% for i in range(1,31)%}
+                <option value="{{i}}">{{i}}일</option>
+            {% endfor %}
+        </select>
+        <input type="text" name="survey_content" value="{{survey_content}}" style="display:none">
+
+        <input type="submit" value="예약하기">
+        {% endif %}
+    </form>
+    </div>
+{% endblock %}
