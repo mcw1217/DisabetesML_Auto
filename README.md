@@ -1,14 +1,18 @@
 # DiabetesML_Auto
 
-
-
 * 머신러닝 기법을 사용하여 당뇨환자 데이터셋을 학습한 모델을 Flask로 제작한 웹서버에 올려 서비스를 만들어냈음 
 * Flask 구현기능: 로그인,회원가입,세션, 관리자페이지, 유저페이지, 당뇨병 검사 및 병원 예약, 관리자페이지 예약 확인 및 삭제, 준지도학습
 
 * 서비스: 병원예약 시스템을 통해 당뇨병 설문이 병원으로 전송되고, 병원의 진단 결과와 설문지를 서버로 보내 모델을 재학습 하는 준지도학습을 구현
 
+## One Touch Install
+start.exe를 실행하여, 자동으로 Miniconda설치와 Mysql 연동을 진행함 (Mysql은 아래 링크에서 다운로드 후 start.exe가 위치한 파일 넣어주고 start.exe를 실행시키면 자동으로 
+설정이 완료됨
 
-## 당뇨병 데이터셋 분석
+mysql 다운로드 링크
+https://drive.google.com/file/d/1tyE0_1dR1o6CFzuyeBVRuc5bABr3QX5p/view
+
+## Diabetes Dataset Analysis
 
 Gender,Polyuria,Polydipsia,sudden weight loss,weakness,Polyphagia,Genital thrush,visual blurring,Itching,Irritability,delayed healing,partial paresis,muscle stiffness,Alopecia,Obesity,class
 
@@ -18,7 +22,7 @@ https://ko.wikipedia.org/wiki/%EC%A7%88%ED%9A%A8%EB%AA%A8%EA%B0%90%EC%97%BC%EC%A
 (질효모감염증) 질의 발적, 가려움, 통증, 흰색의 질 분비물 등의 증상이 있다.
 
 
-## 모델 성능 분석
+## Model performance analysis
 
 
 |        Model      |   Score Min   |   Score Mean   |   Cross Score Min   |   Cross Score Mean   |
