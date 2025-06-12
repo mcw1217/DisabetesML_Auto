@@ -10,7 +10,7 @@ start.exe를 실행하여, 자동으로 Miniconda설치와 Mysql 연동을 진�
 설정이 완료됨
 
 mysql 다운로드 링크
-https://drive.google.com/file/d/1tyE0_1dR1o6CFzuyeBVRuc5bABr3QX5p/view
+[https://drive.google.com/file/d/1tyE0_1dR1o6CFzuyeBVRuc5bABr3QX5p/view](https://drive.google.com/file/d/11xw8XUPPMWz_babnNe7B2qriffAxANgG/view?usp=sharing)
 
 ## Diabetes Dataset Analysis
 
